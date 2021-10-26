@@ -4,7 +4,7 @@
 }
 
 .navbar-container {
-  max-width: 1200px;
+  max-width: 600px;
   margin: auto;
   padding: 20px;
   display: flex;
@@ -13,6 +13,29 @@
   justify-content: space-between;
 }
 
+.links a:first-child {
+  margin-right: 20px;
+}
+
 h1 {
   margin: 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-element {
+  font-size: 1em;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+.button {
+  margin-top: 20px;
+}
+
+textarea {
+  min-height: 60px;
 }
