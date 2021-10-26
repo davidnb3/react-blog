@@ -7,7 +7,7 @@ export default function Navbar() {
     <div className="navbar">
       <div className="navbar-container">
         <h1>React-Blog</h1>
-        <div>
+        <div className="links">
           <Link to="/">Home</Link>
           <Link to="/write">Write</Link>
         </div>
