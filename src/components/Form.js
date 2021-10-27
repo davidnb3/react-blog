@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./components.css";
 
 export default function Form({ setArticle, handleSubmit, ...article }) {
@@ -43,7 +42,9 @@ export default function Form({ setArticle, handleSubmit, ...article }) {
         name="topic"
         required
       >
-        <option value="guides">Guides</option>
+        <option value="guides" selected>
+          Guides
+        </option>
         <option value="music">Music</option>
         <option value="recipes">Recipes</option>
         <option value="anything else">Everything else</option>
