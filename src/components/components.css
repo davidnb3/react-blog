@@ -39,3 +39,37 @@ form {
 textarea {
   min-height: 60px;
 }
+
+.card {
+  background-color: rgba(233, 215, 182, 0.767);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.card-title {
+  margin: 0;
+  font-size: 2em;
+  font-weight: normal;
+}
+
+.card-author {
+  margin-right: 5px;
+}
+
+.card-author,
+.card-date,
+.card-topic {
+  font-size: 0.8em;
+  font-style: italic;
+}
+
+.card-body {
+  margin: 10px 0;
+  word-break: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  max-height: 100px; /* fallback */
+  -webkit-line-clamp: 5; /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
