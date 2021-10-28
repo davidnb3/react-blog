@@ -32,33 +32,50 @@ form {
   padding: 5px;
 }
 
-.button {
-  margin-top: 20px;
-}
-
 textarea {
   min-height: 60px;
 }
 
-.card {
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card,
+.post {
   background-color: rgba(233, 215, 182, 0.767);
   padding: 20px;
   margin-bottom: 20px;
 }
 
-.card-title {
+.card > * {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card-title,
+.post-title {
   margin: 0;
   font-size: 2em;
   font-weight: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.card-author {
+.card-author,
+.post-author {
   margin-right: 5px;
 }
 
 .card-author,
 .card-date,
-.card-topic {
+.card-topic,
+.post-author,
+.post-date,
+.post-topic {
   font-size: 0.8em;
   font-style: italic;
 }
@@ -69,7 +86,11 @@ textarea {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  max-height: 100px; /* fallback */
-  -webkit-line-clamp: 5; /* number of lines to show */
+  max-height: 100px;
+  -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
+}
+
+.post-body {
+  margin: 10px 0;
 }

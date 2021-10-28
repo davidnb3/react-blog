@@ -1,14 +1,15 @@
+import { useState } from "react";
 import "./components.css";
 
-export default function Form({ setNewArticle, handleSubmit, ...newArticle }) {
+export default function EditPost({ singlePost, setSinglePost, setEditPost }) {
   return (
-    <form onSubmit={handleSubmit}>
+    <form>
       <label htmlFor="title">Title</label>
       <input
         className="form-element"
-        value={newArticle.title}
+        value={singlePost[0].title}
         onChange={(e) =>
-          setNewArticle({ ...newArticle, title: e.target.value })
+          setSinglePost({ ...singlePost, title: e.target.value })
         }
         type="text"
         id="title"
@@ -19,9 +20,9 @@ export default function Form({ setNewArticle, handleSubmit, ...newArticle }) {
       <label htmlFor="author">Author</label>
       <input
         className="form-element"
-        value={newArticle.author}
+        value={singlePost[0].author}
         onChange={(e) =>
-          setNewArticle({ ...newArticle, author: e.target.value })
+          setSinglePost({ ...singlePost, author: e.target.value })
         }
         type="text"
         it="author"
@@ -31,8 +32,8 @@ export default function Form({ setNewArticle, handleSubmit, ...newArticle }) {
       <label htmlFor="text">Text</label>
       <textarea
         className="form-element"
-        value={newArticle.body}
-        onChange={(e) => setNewArticle({ ...newArticle, body: e.target.value })}
+        value={singlePost[0].body}
+        onChange={(e) => setSinglePost({ ...singlePost, body: e.target.value })}
         type="text"
         id="body"
         name="body"
@@ -41,9 +42,9 @@ export default function Form({ setNewArticle, handleSubmit, ...newArticle }) {
       <label htmlFor="topic">Topic</label>
       <select
         className="form-element"
-        value={newArticle.topic}
+        value={singlePost[0].topic}
         onChange={(e) =>
-          setNewArticle({ ...newArticle, topic: e.target.value })
+          setSinglePost({ ...singlePost, topic: e.target.value })
         }
         id="topic"
         name="topic"
@@ -54,8 +55,15 @@ export default function Form({ setNewArticle, handleSubmit, ...newArticle }) {
         <option value="recipes">Recipes</option>
         <option value="development">Development</option>
       </select>
-      <button type="submit" className="form-element button">
+      <button type="submit" className="form-element btn">
         Submit
+      </button>
+      <button
+        type="submit"
+        className="form-element btn"
+        onClick={() => setEditPost(false)}
+      >
+        Cancel
       </button>
     </form>
   );

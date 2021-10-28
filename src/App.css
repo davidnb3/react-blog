@@ -4,3 +4,9 @@
   height: 100%;
   font-family: sans-serif;
 }
+
+.app-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+}
