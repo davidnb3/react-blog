@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import Post from "../components/Post";
-
 import "./pages.css";
 
 export default function Homepage({ posts, setPosts }) {

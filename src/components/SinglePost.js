@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-import EditPost from "./EditPost";
+import Form from "./Form";
 
 export default function SinglePost() {
   const { id } = useParams();
@@ -26,10 +26,11 @@ export default function SinglePost() {
     // Using equal instead of strict equal
     // because post.id is a number, id from params is a string
     const filteredPost = posts.filter((post) => post.id == id);
+    // filter out the post and save it as singlePost
     setSinglePost(filteredPost);
   }, [id]);
 
-  // Only render if singlePost is not undefined
+  // Do not render if singlePost is undefined
   if (singlePost) {
     return (
       <div className="post">
@@ -49,9 +50,9 @@ export default function SinglePost() {
             </button>
           </>
         )}
-        {/*If editPost is true, display EditPost*/}
+        {/*If editPost is true, display Form*/}
         {editPost === true && (
-          <EditPost
+          <Form
             singlePost={singlePost}
             setSinglePost={setSinglePost}
             setEditPost={setEditPost}
