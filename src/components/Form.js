@@ -34,7 +34,7 @@ export default function Form({ singlePost }) {
         }
       }
     } else {
-      // push new article to existingPosts array
+      // if false, push new article to existingPosts array
       existingPosts.push(formData);
     }
     // save array to localstorage
@@ -78,12 +78,12 @@ export default function Form({ singlePost }) {
       <label htmlFor="topic">Topic</label>
       <select
         className="form-element"
-        defaultValue="recipes"
         onChange={(e) => setFormData({ ...formData, topic: e.target.value })}
         id="topic"
         name="topic"
         required
       >
+        <option value="">Choose topic</option>
         <option value="guide">Guide</option>
         <option value="music">Music</option>
         <option value="recipes">Recipes</option>
