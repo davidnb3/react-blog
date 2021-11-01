@@ -11,7 +11,7 @@ export default function Homepage({ posts, setPosts }) {
     setPosts(JSON.parse(localStorage.getItem("existingPosts")));
   }, [setPosts]);
 
-  if (posts) {
+  if (posts.length !== 0) {
     return (
       <>
         <Filter
@@ -52,6 +52,6 @@ export default function Homepage({ posts, setPosts }) {
       </>
     );
   } else {
-    return null;
+    return <div className="placeholder">Click on Write to add an article</div>;
   }
 }
