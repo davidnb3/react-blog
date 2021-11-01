@@ -42,11 +42,11 @@ export default function SinglePost() {
             <span className="post-date">{singlePost[0].date}</span>
             <p className="post-body">{singlePost[0].body}</p>
             <span className="post-topic">{singlePost[0].topic}</span>
-            <button className="post-delete btn" onClick={handleDelete}>
-              Delete
-            </button>
             <button className="post-edit btn" onClick={() => setEditPost(true)}>
               Edit
+            </button>
+            <button className="post-delete btn" onClick={handleDelete}>
+              Delete
             </button>
           </>
         )}
