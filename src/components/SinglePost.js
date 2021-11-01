@@ -23,7 +23,7 @@ export default function SinglePost() {
 
   useEffect(() => {
     const posts = JSON.parse(localStorage.getItem("existingPosts"));
-    // Using equal instead of strict equal
+    // Not using strict equal
     // because post.id is a number, id from params is a string
     const filteredPost = posts.filter((post) => post.id == id);
     // filter out the post and save it as singlePost
