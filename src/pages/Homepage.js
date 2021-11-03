@@ -29,6 +29,8 @@ export default function Homepage({ posts, setPosts }) {
               post.topic.toLowerCase().includes(topicFilter.toLowerCase())
             ) {
               return post;
+            } else {
+              return null;
             }
           })
           // Then filter by title and author
@@ -43,6 +45,8 @@ export default function Homepage({ posts, setPosts }) {
               post.author.toLowerCase().includes(searchInput.toLowerCase())
             ) {
               return post;
+            } else {
+              return null;
             }
           })
           // Then map out each post
